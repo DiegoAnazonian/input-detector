@@ -12,7 +12,7 @@ export class InputDetectorDirective implements OnInit, OnDestroy {
   private readonly CHANGE_EVENT = 'change';
 
   @Input() inputsToSave?: string[];
-  @Input() onFinish: EventEmitter<void> = new EventEmitter();
+  @Input() onFinish: EventEmitter<Function> = new EventEmitter();
   @Output() onInputChanges: EventEmitter<any> = new EventEmitter();
 
   constructor(private el: ElementRef) { }
@@ -48,7 +48,8 @@ export class InputDetectorDirective implements OnInit, OnDestroy {
   }
 
   subscribeFinishEvent = () => {
-    this.subscription.add(this.onFinish.subscribe(_ => this.onInputChanges.emit(this.inputsField)));
+    //this.subscription.add(this.onFinish.subscribe(_ => this.onInputChanges.emit(this.inputsField)));
+    this.subscription.add(this.onFinish.subscribe(callback => callback(this.inputsField)));
   }
 
   ngOnDestroy() {

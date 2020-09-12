@@ -1,0 +1,33 @@
+<div inputDetector id="personal_info" [inputsToSave]="inputsToSave" (onInputChanges)="onInputChanges($event)" [onFinish]="$onFinish">
+  <div>
+    <div>Name</div>
+    <input name="user_name" placeholder="User name" />
+  </div>
+  <div>
+    <div>Last Name</div>
+    <input name="last_name" placeholder="Last Name" />
+  </div>
+  <div>
+    <div>Address</div>
+    <input name="address" [value]="address" placeholder="Adress" />
+  </div>
+  <br>
+  <button type="button" (click)="onFinish()">Send</button>
+</div>
+
+<form inputDetector name="friend_info" (onInputChanges)="onInputChanges($event)" [onFinish]="$onFinish">
+  <div>
+    <div>Friend Name</div>
+    <input name="friend_user_name" placeholder="User name" />
+  </div>
+  <div>
+    <div>Friend Last Name</div>
+    <input name="friend_last_name" placeholder="Last Name" />
+  </div>
+  <div>
+    <div>Friend Address</div>
+    <input name="friend_address" [value]="address" placeholder="Adress" />
+  </div>
+  <br>
+  <button type="button" (click)="onFinish()">Send</button>
+</form>

@@ -8,6 +8,7 @@ export class CustomForm {
   address = "Av Siempre Viva 742";
   inputsToSave = ['user_name', 'last_name'];
   $onFinish: EventEmitter<Function> = new EventEmitter();
+  name: string;
 /*
   onInputChanges = ($event) => {
     console.log($event)

@@ -1,4 +1,4 @@
-<div inputDetector id="personal_info" [inputsToSave]="inputsToSave" [onFinish]="$onFinish">
+<div inputDetector id="personal_info" [onFinish]="$onFinish">
   <div>
     <div>Name</div>
     <input name="user_name" placeholder="User name" />
@@ -11,7 +11,21 @@
     <div>Address</div>
     <input name="address" [value]="address" placeholder="Adress" />
   </div>
+  <input type="text" class="form-control" minlength="5" maxlength="100" autocomplete="off" name="name" #pepe="ngModel" [(ngModel)]="name" required />
   <br>
+  <div>
+    <p>Please select your gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </div>
+  <div>
+      <input type="checkbox" id="agreement" name="agreement" value="I agree">
+      <label for="vehicle1"> I agree</label><br>
+  </div>
   <button type="button" (click)="onFinish()">Send</button>
 </div>
 

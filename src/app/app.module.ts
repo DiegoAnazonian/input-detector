@@ -4,15 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { InputDetectorDirective } from './detector-directive/detector.directive';
 import { CustomForm } from './form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputDetectorDirective,
-    CustomForm
+    CustomForm,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

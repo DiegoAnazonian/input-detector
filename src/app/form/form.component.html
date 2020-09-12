@@ -1,4 +1,4 @@
-<div inputDetector id="personal_info" [inputsToSave]="inputsToSave" (onInputChanges)="onInputChanges($event)" [onFinish]="$onFinish">
+<div inputDetector id="personal_info" [inputsToSave]="inputsToSave" [onFinish]="$onFinish">
   <div>
     <div>Name</div>
     <input name="user_name" placeholder="User name" />
@@ -15,7 +15,7 @@
   <button type="button" (click)="onFinish()">Send</button>
 </div>
 
-<form inputDetector name="friend_info" (onInputChanges)="onInputChanges($event)" [onFinish]="$onFinish">
+<form inputDetector name="friend_info" [onFinish]="$onFinish">
   <div>
     <div>Friend Name</div>
     <input name="friend_user_name" placeholder="User name" />

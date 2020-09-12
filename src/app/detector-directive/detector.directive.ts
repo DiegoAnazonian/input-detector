@@ -13,7 +13,7 @@ export class InputDetectorDirective implements OnInit, OnDestroy {
 
   @Input() inputsToSave?: string[];
   @Input() onFinish: EventEmitter<Function> = new EventEmitter();
-  @Output() onInputChanges: EventEmitter<any> = new EventEmitter();
+  //@Output() onInputChanges: EventEmitter<any> = new EventEmitter();
 
   constructor(private el: ElementRef) { }
 
